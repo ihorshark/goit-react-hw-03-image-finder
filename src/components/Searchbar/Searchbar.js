@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Notify } from 'notiflix';
 import './Searchbar.css';
 
 export default class Searchbar extends Component {
   state = {
     searchQuery: '',
+  };
+
+  static propTypes = {
+    omSubmit: PropTypes.func,
   };
 
   onInputChange = evt => {

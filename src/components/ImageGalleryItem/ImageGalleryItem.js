@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './ImageGalleryItem.css';
 
 export default function ImageGalleryItem({ image, onClick }) {
@@ -15,3 +16,8 @@ export default function ImageGalleryItem({ image, onClick }) {
     </li>
   );
 }
+
+ImageGalleryItem.propTypes = {
+  image: PropTypes.object,
+  onClick: PropTypes.func,
+};
